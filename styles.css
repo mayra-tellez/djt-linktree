@@ -3,6 +3,11 @@ body {
   padding-top: 10%;
   height: 100vh;
   box-sizing: border-box;
+  font-family: 'Marcellus', serif;
+  /* background-image: linear-gradient(to bottom right, rgb(176, 181, 252), rgb(254, 254, 197)); */
+  background-image: url(./images/backgroundBirds.jpg);
+  background-size: 150% 100%;
+  color: white;
 }
 
 header, header > div {
@@ -11,22 +16,40 @@ header, header > div {
   align-items: center;
 }
 
-header > img {
-  width: 100px;
-  height: 100px;
+footer > img {
+  width: 75px;
+  height: 75px;
+  /* border-radius: 5px; */
   border-radius: 50%;
+  border: 1px solid white;
   object-fit: cover;
+  object-position: top;
 }
 
 header > div {
   margin: 8% 0 5% 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 header p {
-  margin: 0 0 15px 0;
+  margin: 0 0 12px 0;
+}
+
+header p:nth-child(2) {
+  /* animation-name: banner;
+  animation-duration: 15s;
+  animation-iteration-count: infinite; */
+  /* animation: banner 15s linear infinite; */
+}
+
+@keyframes banner {
+  0% {transform: translateX(200%);}
+  100% {transform: translateX(-200%);}
 }
 
 main {
+  /* margin-top: 10%; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,33 +57,21 @@ main {
 
 main > a {
   margin: 2%;
-  border: 1px solid black;
-  /* padding: 3%; */
+  border: 1px solid white;
   width: 90%;
-  /* border-radius: 3px; */
   text-decoration: none;
-  color: black;
+  /* color: black; */
+  color: white;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 
 a > img {
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 50%;
-  border-top-left-radius: 50%;
-  border-bottom-left-radius: 50%;
-  width: 50px;
-  height: 50px;
-  /* margin-bottom: -3%; */
+  padding-right: 3%;
+  height: 35px;
   object-fit: cover;
-  /* object-position: top; */
   box-sizing: border-box;
-  /* width: 100px; */
-  /* height: 50px; as the half of the width */
-  /* border-top-left-radius: 110px;  100px of height + 10px of border */
-  /* border-top-right-radius: 110px; 100px of height + 10px of border */
-  /* border-bottom: 0; */
 }
 
 a > p {
@@ -72,4 +83,6 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 10px;
+  /* color: rgb(90, 92, 120); */
+  color: white;
 }
