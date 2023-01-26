@@ -4,9 +4,8 @@ body {
   height: 100vh;
   box-sizing: border-box;
   font-family: 'Marcellus', serif;
-  /* background-image: linear-gradient(to bottom right, rgb(176, 181, 252), rgb(254, 254, 197)); */
-  background-image: url(./images/backgroundBirds.jpg);
-  background-size: 150% 100%;
+  background-image: url(./images/mountainSky.jpg);
+  background-size: 100% 150%;
   color: white;
 }
 
@@ -16,10 +15,9 @@ header, header > div {
   align-items: center;
 }
 
-footer > img {
+header > img {
   width: 75px;
   height: 75px;
-  /* border-radius: 5px; */
   border-radius: 50%;
   border: 1px solid white;
   object-fit: cover;
@@ -36,20 +34,19 @@ header p {
   margin: 0 0 12px 0;
 }
 
-header p:nth-child(2) {
+/* header p:nth-child(2) { */
   /* animation-name: banner;
   animation-duration: 15s;
   animation-iteration-count: infinite; */
   /* animation: banner 15s linear infinite; */
-}
+/* } */
 
-@keyframes banner {
+/* @keyframes banner {
   0% {transform: translateX(200%);}
   100% {transform: translateX(-200%);}
-}
+} */
 
 main {
-  /* margin-top: 10%; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,7 +57,6 @@ main > a {
   border: 1px solid white;
   width: 90%;
   text-decoration: none;
-  /* color: black; */
   color: white;
   display: flex;
   justify-content: space-between;
@@ -83,6 +79,5 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 10px;
-  /* color: rgb(90, 92, 120); */
   color: white;
 }
