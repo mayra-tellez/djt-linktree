@@ -1,12 +1,17 @@
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding-top: 10%;
-  height: 100vh;
+  height: 100%;
   box-sizing: border-box;
   font-family: 'Marcellus', serif;
   background-image: url(./images/mountainSky.jpg);
   background-size: 100% 150%;
   color: white;
+  overflow: hidden;
 }
 
 header, header > div {
@@ -22,11 +27,12 @@ header > img {
   border: 1px solid white;
   object-fit: cover;
   object-position: top;
+  animation: fade-in 1s ease;
 }
 
 header > div {
   margin: 8% 0 5% 0;
-  width: 100%;
+  width: 50%;
   overflow: hidden;
 }
 
@@ -34,22 +40,11 @@ header p {
   margin: 0 0 12px 0;
 }
 
-/* header p:nth-child(2) { */
-  /* animation-name: banner;
-  animation-duration: 15s;
-  animation-iteration-count: infinite; */
-  /* animation: banner 15s linear infinite; */
-/* } */
-
-/* @keyframes banner {
-  0% {transform: translateX(200%);}
-  100% {transform: translateX(-200%);}
-} */
-
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: drop-fade-in3 1.5s ease;
 }
 
 main > a {
@@ -80,4 +75,105 @@ footer {
   position: absolute;
   bottom: 10px;
   color: white;
+  animation: hoist-up 2.5s ease;
+}
+
+/* ---------------------------- */
+/* -------- Animations -------- */
+/* ---------------------------- */
+
+/* ----- header animations ----- */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+header p:nth-child(1) {
+  animation: drop-fade-in 1s ease;
+}
+
+header p:nth-child(2) {
+  animation: drop-fade-in2 1s ease;
+}
+
+@keyframes drop-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  25% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  75% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes drop-fade-in2 {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  25% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  75% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ----- main animation ----- */
+@keyframes drop-fade-in3 {
+  0% {
+    opacity: 0;
+    transform: translateY(-150%);
+  }
+  25% {
+    opacity: 0;
+    transform: translateY(-150%);
+  }
+  75% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ----- footer animation ----- */
+@keyframes hoist-up {
+  0% {
+    transform: translateY(150%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
