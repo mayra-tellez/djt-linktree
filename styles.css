@@ -37,6 +37,7 @@ header > div {
 
 header p {
   margin: 0 0 12px 0;
+  text-shadow: 2px 2px 4px gray;
 }
 
 main {
@@ -47,25 +48,28 @@ main {
 }
 
 main > a {
-  margin: 2%;
+  margin: 1% 2%;
   border: 1px solid white;
   width: 90%;
   text-decoration: none;
   color: white;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
-a > img {
+/* a > img {
   padding-right: 3%;
   height: 35px;
   object-fit: cover;
   box-sizing: border-box;
-}
+} */
 
 a > p {
   padding-left: 3%;
+}
+
+a > i {
+  padding-left: 1%;
 }
 
 footer {
